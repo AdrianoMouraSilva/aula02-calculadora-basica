@@ -2,15 +2,7 @@
 const $ = (seletor) => document.querySelector(seletor);       
 const $$ = (seletor) => document.querySelectorAll(seletor);
 
-const botaoSomar = $('#botao-somar')
-const botaoSubtrair = $('#botao-subtrair')
-const botaoMultiplicar = $('#botao-multiplicar')
-const botaoDividir = $('#botao-dividir')
-
-// 1. Seleciona todos os botões da classe
-// const botoesCalcular = document.querySelectorAll('.botao-calcular');
 const botoesCalcular = $$('.botao-calcular')
-
 function calcularGeral(event) {
   const acao = event.currentTarget.dataset.acao;
   const valUm = $('#val-1')
@@ -22,7 +14,6 @@ function calcularGeral(event) {
         const soma = Number(valUm.value) + Number(valDois.value)
         resultado.textContent = `${valUm.value} + ${valDois.value} = ${soma}` 
         break;
-
     case 'subtrair':
         const subtrair = Number(valUm.value) - Number(valDois.value)
         resultado.textContent = `${valUm.value} - ${valDois.value} = ${subtrair}` 
@@ -31,8 +22,7 @@ function calcularGeral(event) {
         const multiplicar = Number(valUm.value) * Number(valDois.value)
         resultado.textContent = `${valUm.value} x ${valDois.value} = ${multiplicar}` 
         break;
-
-      case 'dividir':
+    case 'dividir':
         const dividir = Number(valUm.value) / Number(valDois.value)
         resultado.textContent = `${valUm.value} / ${valDois.value} = ${dividir}` 
         break;
@@ -45,6 +35,13 @@ function calcularGeral(event) {
 botoesCalcular.forEach((botao) => {
   botao.addEventListener('click', calcularGeral);
 });
+
+
+
+const botaoSomar = $('#botao-somar')
+const botaoSubtrair = $('#botao-subtrair')
+const botaoMultiplicar = $('#botao-multiplicar')
+const botaoDividir = $('#botao-dividir')
 
 function calcularSomar(){
     const valUm = $('#val-1')
