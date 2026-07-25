@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="assets/css/mini-bootstrap.css"> -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/javascript/main.js" defer></script>
+    <title>Calculadora de Básica</title>
+
+</head>
+
+<body>
+    <main>
+        <form class="container">
+            <h1 class="titulo">Calculadora Básica</h1>
+            <input id="caixa-nome" class="caixa-texto" type="text" placeholder="Digite o primeiro valor">
+            <input id="caixa-valor" class="caixa-texto" type="number" placeholder="Digite o segundo valor">
+            <div class="corpo-botao">
+                <button id="botao-somar" class="botao-calcular" data-acao="somar" type="button">Somar</button>
+                <button id="botao-subtrair" class="botao-calcular" data-acao="subtrair" type="button">Subtrair</button>
+     
+            </div>
+
+            <div class="corpo-botao">
+
+                <button id="botao-multiplicar" class="botao-calcular" data-acao="multiplicar" type="button">Multiplicar</button>
+                <button id="botao-dividir" class="botao-calcular" data-acao="dividir" type="button">Dividir</button>
+            </div>
+
+
+            <div id="resultado" class="resultado">O resultado aparecerá aqui ...</div>
+        </form>
+    </main>
+</body>
+
+</html>
